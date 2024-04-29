@@ -36,8 +36,11 @@ Describe how users can interact with the example project. Include:
 Explain the structure of your project:
 
 ├── server1/  Contains Server 1 implementation
+
 ├── server2/  Contains Server 2 implementation
+
 └── README.md Project documentation
+
 
 # Contributing
 Provide guidelines for how users can contribute to the project, such as:
