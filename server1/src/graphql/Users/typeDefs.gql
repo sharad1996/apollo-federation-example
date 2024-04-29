@@ -1,0 +1,23 @@
+scalar JSON
+type User {
+  _id: String
+  name: String
+  email: String
+  password: String
+}
+
+type UserPagination {
+  total: Int
+  page: Int
+  size: Int
+  users: [User]
+}
+extend type Query {
+  users(page: Int, size: Int, filters: JSON): UserPagination
+  myProfile: User
+}
+extend type Mutation {
+  createUser(name: String, email: String!, password: String!): User
+  updateUser(_id: ID!, name: String, email: String!): User
+  deleteUser(_id: ID!): Boolean
+}

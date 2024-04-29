@@ -1,0 +1,16 @@
+type Report {
+  _id: ID
+  reportLink: String
+  userName: String
+}
+
+extend type Query {
+  getAllReport: [Report]
+  getReport(userName: String): Report
+}
+
+type Mutation {
+  addReport(userName: String, reportLink: String): Report
+  updateReport(id: ID!, userName: String, reportLink: String): Report
+  deleteReport(id: ID!): Report
+}
